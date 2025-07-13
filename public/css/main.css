@@ -1,0 +1,190 @@
+:root {
+    --primary-color: #91b3fa;      /* Biru utama */
+    --primary-dark: #1a0f91;       /* Biru tua */
+    --secondary-color: #ff847b;    /* Oranye kemerahan */
+    --accent-blue: #bdd0fb;        /* Biru muda aksen */
+    --accent-pink: #febbba;        /* Pink pastel */
+    --white-color: #ffffff;        /* Putih */
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --info-color: #06b6d4;
+    --dark-color: var(--primary-dark);
+    --light-color: var(--white-color);   
+}
+
+/* Warna dasar layout */
+body {
+    background: var(--primary-dark);
+    color: var(--primary-dark);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar solid */
+.navbar,
+.navbar.bg-primary-dark {
+    background: var(--primary-dark) !important;
+}
+
+/* Navbar teks/ikon */
+.navbar-brand,
+.nav-link,
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white-color) !important;
+}
+
+.nav-link.active,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--secondary-color) !important;
+    font-weight: bold;
+}
+
+/* Tombol utama */
+.btn-learn-more,
+.btn-primary,
+.btn-lg {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    border: none;
+}
+
+/* Hover tombol utama */
+.btn-learn-more:hover,
+.btn-primary:hover {
+    background: var(--accent-pink);
+    color: var(--light-color);
+}
+
+/* Hero section dan box */
+.hero-section,
+.hero-content {
+    background: var(--accent-blue);
+}
+
+.card,
+.floating-card,
+.stats-card,
+.candidate-card {
+    background: var(--white-color);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #bdd0fb99;
+    border: none;
+}
+
+
+/* Progress bar solid */
+.progress-bar {
+    background: var(--secondary-color);
+}
+
+/* Hamburger menu */
+.menu-icon .menu-bar {
+    background: var(--white-color);
+}
+
+/* Contact Info & Icon */
+.contact-info,
+.contact-link {
+    color: var(--primary-dark);
+}
+.contact-info i {
+    color: var(--secondary-color);
+}
+
+/* Section backgrounds (solid) */
+.section-bg-accent {
+    background: var(--accent-blue);
+}
+.section-bg-pink {
+    background: var(--accent-pink);
+}
+
+/* Button khusus pink */
+.btn-pink {
+    background: var(--accent-pink);
+    color: var(--primary-dark);
+    border: none;
+}
+.btn-pink:hover {
+    background: var(--secondary-color);
+    color: var(--primary-dark);
+}
+
+/* Responsive Design (lanjutan dari CSS kamu) */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        text-align: center;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .floating-card {
+        width: 250px;
+        height: 150px;
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        padding: 2rem 0;
+    }
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+    .candidate-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Animations */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effects */
+.card {
+    transition: all 0.3s ease;
+}
+
+/* Progress bar animations */
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+/* Loading animation for real-time updates */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,587 @@
+/* Hero Section */
+.hero-section {
+    background: var(--accent-blue);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.text-gradient {
+    color: var(--secondary-color);
+}
+
+/* Hero Illustration */
+.hero-illustration {
+    position: relative;
+    height: 400px;
+}
+
+/* Abstract Circle Background */
+.abstract-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.circle-bg {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Circle 1 - Large main circle */
+.circle-1 {
+    width: 320px;
+    height: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.12);
+    animation: rotate-slow 20s linear infinite;
+}
+
+/* Circle 2 - Medium offset circle */
+.circle-2 {
+    width: 180px;
+    height: 180px;
+    top: 20%;
+    right: 10%;
+    background: rgba(255, 132, 123, 0.15);
+    animation: float-circle 8s ease-in-out infinite;
+}
+
+/* Circle 3 - Small abstract circle */
+.circle-3 {
+    width: 120px;
+    height: 120px;
+    bottom: 25%;
+    left: 15%;
+    background: rgba(255, 184, 186, 0.12);
+    transform: skew(-5deg);
+    animation: pulse-circle 6s ease-in-out infinite;
+}
+
+/* Circle 4 - Tiny accent circle */
+.circle-4 {
+    width: 80px;
+    height: 80px;
+    top: 30%;
+    left: 20%;
+    background: rgba(189, 208, 251, 0.2);
+    animation: bounce-circle 4s ease-in-out infinite;
+}
+
+/* Circle Animations */
+@keyframes rotate-slow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes float-circle {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes pulse-circle {
+    0%, 100% { 
+        transform: skew(-5deg) scale(1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: skew(-5deg) scale(1.1);
+        opacity: 0.6;
+    }
+}
+
+@keyframes bounce-circle {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Voting Box Container - Menggantikan floating-card */
+.voting-box-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    animation: float 6s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0px) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) translateY(-20px) rotate(2deg); }
+}
+
+/* Main Voting Box */
+.voting-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 90px;
+    transform-style: preserve-3d;
+}
+
+.box-front {
+    position: absolute;
+    width: 140px;
+    height: 90px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 3px solid var(--primary-dark);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.box-slot {
+    width: 90px;
+    height: 4px;
+    background: var(--primary-dark);
+    border-radius: 2px;
+    margin-bottom: 8px;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.box-logo {
+    margin-bottom: 4px;
+}
+
+.box-logo i {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.box-label {
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.box-sublabel {
+    font-size: 0.45rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-align: center;
+    line-height: 1;
+}
+
+.box-top {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 140px;
+    height: 15px;
+    background: linear-gradient(90deg, #e9ecef, #ffffff);
+    border-radius: 10px 10px 0 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    border: 2px solid var(--primary-dark);
+    border-bottom: none;
+}
+
+.box-side {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 15px;
+    height: 90px;
+    background: linear-gradient(180deg, #dee2e6, #f1f3f4);
+    border-radius: 0 10px 10px 0;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    border: 2px solid var(--primary-dark);
+    border-left: none;
+}
+
+/* Ballot Papers */
+.ballot-paper {
+    position: absolute;
+    background: #ffffff;
+    border: 2px solid var(--primary-dark);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ballot-1 {
+    width: 65px;
+    height: 45px;
+    top: 15px;
+    right: 20px;
+    animation: float-ballot-1 4s ease-in-out infinite;
+    transform: rotate(-12deg);
+}
+
+.ballot-2 {
+    width: 55px;
+    height: 40px;
+    bottom: 25px;
+    left: 25px;
+    animation: float-ballot-2 5s ease-in-out infinite;
+    transform: rotate(15deg);
+}
+
+@keyframes float-ballot-1 {
+    0%, 100% { transform: rotate(-12deg) translateY(0px); }
+    50% { transform: rotate(-12deg) translateY(-10px); }
+}
+
+@keyframes float-ballot-2 {
+    0%, 100% { transform: rotate(15deg) translateY(0px); }
+    50% { transform: rotate(15deg) translateY(-8px); }
+}
+
+.ballot-content {
+    text-align: center;
+    width: 100%;
+    padding: 4px;
+}
+
+.ballot-title {
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin-bottom: 4px;
+}
+
+.ballot-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
+
+.ballot-option {
+    width: 25px;
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    position: relative;
+}
+
+.ballot-option.active {
+    background: var(--secondary-color);
+}
+
+.ballot-option.active::after {
+    content: '✓';
+    position: absolute;
+    right: -8px;
+    top: -2px;
+    font-size: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.ballot-check {
+    font-size: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.ballot-text {
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+/* Floating Icons */
+.floating-icon {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.floating-icon i {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
+.icon-1 {
+    top: 20px;
+    left: 5px;
+    animation: float-icon-1 3s ease-in-out infinite;
+}
+
+.icon-2 {
+    top: 60%;
+    right: -5px;
+    animation: float-icon-2 4s ease-in-out infinite;
+}
+
+.icon-3 {
+    bottom: 5px;
+    right: 50px;
+    animation: float-icon-3 3.5s ease-in-out infinite;
+}
+
+@keyframes float-icon-1 {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-8px) scale(1.1); }
+}
+
+@keyframes float-icon-2 {
+    0%, 100% { transform: translateX(0px) scale(1); }
+    50% { transform: translateX(-10px) scale(1.05); }
+}
+
+@keyframes float-icon-3 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(8deg); }
+}
+
+/* Hero Actions Layout */
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.contact-item {
+    margin-bottom: 0.5rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item i {
+    color: var(--secondary-color);
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+    .hero-actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+    
+    .hero-button-container {
+        width: auto;
+        justify-content: flex-start;
+    }
+    
+    .contact-info {
+        width: auto;
+    }
+    
+    .contact-item {
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-illustration {
+        height: 300px;
+    }
+    
+    .voting-box-container {
+        width: 250px;
+        height: 160px;
+    }
+    
+    .voting-box {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .box-front {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .box-slot {
+        width: 75px;
+        height: 3px;
+    }
+    
+    .box-logo i {
+        font-size: 0.8rem;
+    }
+    
+    .box-label {
+        font-size: 0.5rem;
+    }
+    
+    .box-sublabel {
+        font-size: 0.4rem;
+    }
+    
+    .ballot-1 {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .ballot-2 {
+        width: 45px;
+        height: 35px;
+    }
+    
+    .floating-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .floating-icon i {
+        font-size: 0.8rem;
+    }
+    
+    .circle-1 {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .circle-2 {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .circle-3 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .circle-4 {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        margin-top: 1rem;
+    }
+    
+    .btn-lg {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-illustration {
+        height: 250px;
+    }
+    
+    .voting-box-container {
+        width: 220px;
+        height: 140px;
+    }
+    
+    .voting-box {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .box-front {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .circle-1 {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .circle-2 {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .circle-3 {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .circle-4 {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .contact-info {
+        font-size: 0.85rem;
+    }
+    
+    .btn-lg {
+        max-width: 250px;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .floating-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .floating-icon i {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,379 @@
+/* Candidate Profiles Section */
+.candidate-profiles {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.candidate-profiles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(26, 15, 145, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Section Header */
+.section-title {
+    font-size: 2.5rem;
+    color: #1a0f91;
+    position: relative;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #1a0f91, #ff847b);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Candidate Card */
+.candidate-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.candidate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Candidate Header */
+.candidate-header {
+    position: relative;
+    padding: 20px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.candidate-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1a0f91, #2d1bb5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(26, 15, 145, 0.3);
+}
+
+.candidate-badge {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+}
+
+.candidate-badge.secondary {
+    background: linear-gradient(135deg, #ff847b, #ff6b5a);
+    box-shadow: 0 3px 10px rgba(255, 132, 123, 0.3);
+}
+
+.candidate-badge.tertiary {
+    background: linear-gradient(135deg, #91b3fa, #6c95ff);
+    box-shadow: 0 3px 10px rgba(145, 179, 250, 0.3);
+}
+
+/* Candidate Photo */
+.candidate-photo {
+    position: relative;
+    text-align: center;
+    padding: 0 20px 20px;
+}
+
+.candidate-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.candidate-card:hover .candidate-photo img {
+    transform: scale(1.05);
+}
+
+.candidate-social {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Candidate Info */
+.candidate-info {
+    padding: 0 20px 20px;
+}
+
+.candidate-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a0f91;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.candidate-title {
+    font-size: 0.9rem;
+    color: #ff847b;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.candidate-faculty {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Candidate Stats */
+.candidate-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a0f91;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 2px;
+}
+
+/* Candidate Vision */
+
+/* Call to Action */
+.cta-section {
+    background: #1a0f91;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section h5,
+.cta-section p,
+.cta-section .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-section .btn-primary {
+    background: #ff847b;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 132, 123, 0.3);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #1a0f91, #2d1bb5);
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.visi-section,
+.misi-section {
+    position: relative;
+    padding-left: 10px;
+}
+
+.visi-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #1a0f91, #ff847b);
+    border-radius: 2px;
+}
+
+.misi-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #ff847b, #91b3fa);
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .candidate-card {
+        margin-bottom: 2rem;
+    }
+    
+    .candidate-photo img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .photo-overlay {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .candidate-name {
+        font-size: 1.1rem;
+    }
+    
+    .candidate-stats {
+        padding: 12px;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+    
+    .cta-section {
+        padding: 30px 20px;
+    }
+    
+    .cta-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .cta-section .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .candidate-header {
+        padding: 15px 15px 0;
+    }
+    
+    .candidate-info {
+        padding: 0 15px 15px;
+    }
+    
+    .candidate-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .candidate-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.candidate-card {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.candidate-card:nth-child(1) { animation-delay: 0.1s; }
+.candidate-card:nth-child(2) { animation-delay: 0.2s; }
+.candidate-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hover effects for stats */
+.candidate-stats:hover .stat-item {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: scale(1.1) !important;
+}
